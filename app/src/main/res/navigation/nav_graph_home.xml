@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_home"
+    app:startDestination="@id/fragment_login">
+
+    <fragment
+        android:id="@+id/fragment_login"
+        android:label="Login"
+        android:name="com.shantanu.example.awspoc.ui.feature.login.LoginFragment"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/action_fragment_login_to_fragment_home"
+            app:destination="@id/fragment_home" />
+        <action
+            android:id="@+id/action_fragment_login_to_fragment_registeration"
+            app:destination="@id/fragment_registeration" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_registeration"
+        android:label="Registration"
+        android:name="com.shantanu.example.awspoc.ui.feature.register.RegistrationFragment"
+        tools:layout="@layout/fragment_registration">
+        <action
+            android:id="@+id/action_fragment_registeration_to_fragment_login"
+            app:destination="@id/fragment_login" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_home"
+        android:label="Home"
+        android:name="com.shantanu.example.awspoc.ui.feature.home.HomeFragment"
+        tools:layout="@layout/fragment_home">
+
+
+    </fragment>
+
+
+
+</navigation>
